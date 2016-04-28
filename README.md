@@ -1,2 +1,2 @@
 # scripts
-//simple scripts for personal use
+simple scripts for personal use
