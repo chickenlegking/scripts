@@ -1,7 +1,6 @@
-var section1s = ["CS374AL1"];
-var section2s = ["CS374AYH"];
+var section1s = ["MATH444D3"];
+var section2s = "";
 var section3s = "";
-var sectionLength = 3;
 detectRemaining(section1s, section2s, section3s);
 
 function detectRemaining(section1s, section2s, section3s){
@@ -21,7 +20,7 @@ function detectRemaining(section1s, section2s, section3s){
             var currSection = items[4].textContent;
             var status;
             if (section1s !== ""){
-                courseID = section1s[0].substring(0, section1s[0].length-sectionLength);
+                courseID = section1s[0].substring(0, section1s[0].search(/\d\d\d/)+3);
                 if (courseID == currCourse){
                     got1 = true;
                     if (!found1) document.cookie = "section1=false";
@@ -94,3 +93,5 @@ function detectRemaining(section1s, section2s, section3s){
         location.reload();
     }, 5000);
 }
+
+
